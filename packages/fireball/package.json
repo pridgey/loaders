@@ -1,6 +1,6 @@
 {
   "name": "@pridgey/loader-fireball",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "keywords": [],
   "types": "dist/index.d.ts",
