@@ -1,5 +1,5 @@
 {
-  "name": "fireball",
+  "name": "@pridgey/loader-fireball",
   "version": "1.0.5",
   "description": "",
   "keywords": [],
@@ -26,5 +26,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "gitHead": "a010543f7e47f93cc53a57ac8620df65e87418cd"
+  "gitHead": "388a9e0bf4363d8c47be0f5ab235e3962a315fce"
 }
