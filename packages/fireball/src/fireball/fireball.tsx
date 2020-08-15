@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export default function App() {
+export default function Fireball() {
   const randomRange = (min: number, max: number) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
