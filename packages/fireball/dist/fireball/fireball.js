@@ -8,12 +8,18 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
-exports.Fireball = function () {
+exports.Fireball = function (_a) {
+    var Height = _a.Height, Width = _a.Width;
     var randomRange = function (min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     };
     var animationStyle = "\n  @keyframes dance {\n    0% {\n      transform: skewX(-" + randomRange(2, 5) + "deg) perspective(0) rotate(-3deg);\n    }\n  \n    50% {\n      transform: skewX(2deg) perspective(100px) rotate(2deg);\n    }\n\n    100% {\n      transform: skewX(2deg) perspective(100px) rotate(2deg);\n    }\n  }\n\n  @keyframes atmosphere {\n    0% {\n      opacity: 0.4;\n    }\n\n    50% {\n      opacity: 0.9;\n    }\n\n    100% {\n      opacity: 0.9;\n    }\n  }\n\n  @keyframes drop {\n    0% {\n      transform: translate(0, -2000px);\n    }\n\n    100% {\n      transform: translate(0, 0);\n    }\n  }\n\n  .container {\n    animation-duration: " + randomRange(1, 2) + "s;\n    animation-name: drop;\n    animation-iteration-count: 1;\n  }\n\n  .fireball {\n    transform-origin: 50% 80%;\n    animation-delay: -" + randomRange(2, 5) + "s;\n    animation-duration: 0." + randomRange(2, 4) + "s;\n    animation-iteration-count: infinite;\n    animation-name: dance;\n  }\n\n  .left_flame {\n    transform-origin: 80% 80%;\n    animation-delay: -" + randomRange(2, 5) + "s;\n    animation-duration: 0." + randomRange(1, 3) + "s;\n    animation-iteration-count: infinite;\n    animation-name: dance;\n  }\n  .right_flame {\n    transform-origin: 20% 80%;\n    animation-delay: -" + randomRange(2, 5) + "s;\n    animation-duration: 0." + randomRange(1, 3) + "s;\n    animation-iteration-count: infinite;\n    animation-name: dance;\n  }\n  .main_flame {\n    transform-origin: 50% 80%;\n    animation-delay: -" + randomRange(2, 5) + "s;\n    animation-duration: 0." + randomRange(1, 3) + "s;\n    animation-iteration-count: infinite;\n    animation-name: dance;\n  }\n  .interior_flame {\n    transform-origin: 50% 80%;\n    animation-delay: -" + randomRange(2, 5) + "s;\n    animation-duration: 0." + randomRange(1, 3) + "s;\n    animation-iteration-count: infinite;\n    animation-name: dance;\n  }\n  .atmosphere {\n    animation-delay: " + randomRange(3, 5) + "s;\n    animation-duration: " + randomRange(3, 6) + "s;\n    animation-iteration-count: infinite;\n    animation-direction: alternate;\n    animation-name: atmosphere;\n  }\n  ";
-    return (React.createElement("div", { className: "container", style: { width: "500px", padding: "30px", boxSizing: "border-box" } },
+    return (React.createElement("div", { className: "container", style: {
+            width: Width,
+            height: Height,
+            padding: "30px",
+            boxSizing: "border-box",
+        } },
         React.createElement("style", null, animationStyle),
         React.createElement("svg", { className: "fireball", viewBox: "0 0 119 156", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
             React.createElement("path", { className: "left_flame", d: "M66.5206 90.1305C66.4398 108.198 51.5999 122.779 33.3747 122.697C15.1495 122.616 0.440476 107.903 0.52121 89.8355C0.601945 71.7678 15.0973 42.56 33.8752 10.6986C53.9153 43.8881 66.6013 72.0628 66.5206 90.1305Z", fill: "url(#paint0_linear)" }),

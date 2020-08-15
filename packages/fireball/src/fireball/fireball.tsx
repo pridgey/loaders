@@ -1,6 +1,11 @@
 import * as React from "react";
 
-export const Fireball = () => {
+type FireballProps = {
+  Height?: string;
+  Width?: string;
+};
+
+export const Fireball = ({ Height, Width }: FireballProps) => {
   const randomRange = (min: number, max: number) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
@@ -98,7 +103,12 @@ export const Fireball = () => {
   return (
     <div
       className="container"
-      style={{ width: "500px", padding: "30px", boxSizing: "border-box" }}
+      style={{
+        width: Width,
+        height: Height,
+        padding: "30px",
+        boxSizing: "border-box",
+      }}
     >
       <style>{animationStyle}</style>
       <svg

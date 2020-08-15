@@ -1,1 +1,6 @@
-export declare const Fireball: () => JSX.Element;
+declare type FireballProps = {
+    Height?: string;
+    Width?: string;
+};
+export declare const Fireball: ({ Height, Width }: FireballProps) => JSX.Element;
+export {};
